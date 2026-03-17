@@ -630,11 +630,9 @@ h3 {
 }
 
 .intro-panel,
-.manifesto-panel,
 .preview-panel,
 .layers-panel,
 .workflow-panel,
-.ecosystem-panel,
 .audience-panel,
 .closing-panel {
   min-height: 240px;
@@ -648,17 +646,16 @@ h3 {
 }
 
 .statement-block h2,
-.manifesto-copy h2,
 .preview-copy h2,
 .layers-head h2,
 .workflow-head h2,
-.ecosystem-copy h2,
 .section-headline h2,
 .closing-copy h2 {
-  max-width: 11ch;
+  max-width: 14ch;
   font-size: clamp(3rem, 6vw, 5.1rem);
-  line-height: 0.92;
+  line-height: 0.98;
   letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
 .statement-side {
@@ -676,19 +673,6 @@ h3 {
   font-family: var(--font-display), serif;
   font-size: 1.55rem;
   line-height: 1.15;
-}
-
-.manifesto-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
-  gap: 28px;
-  align-items: start;
-}
-
-.manifesto-text {
-  max-width: 40ch;
-  margin-top: 64px;
-  font-size: 1.05rem;
 }
 
 .narrative-panel {
@@ -745,10 +729,11 @@ h3 {
 }
 
 .narrative-flow h2 {
-  max-width: 11ch;
+  max-width: 13ch;
   font-size: clamp(3rem, 6vw, 5rem);
-  line-height: 0.92;
+  line-height: 0.98;
   letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
 .narrative-steps {
@@ -888,11 +873,10 @@ h3 {
 }
 
 .preview-copy h2 {
-  max-width: 9ch;
+  max-width: 12ch;
 }
 
 .preview-copy .section-copy,
-.manifesto-text,
 .closing-copy .section-copy {
   max-width: 48ch;
 }
@@ -1031,6 +1015,112 @@ h3 {
   gap: 12px;
 }
 
+.layers-head {
+  max-width: 720px;
+}
+
+.layers-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.layers-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--sand);
+  font-size: 0.82rem;
+}
+
+.layers-copy {
+  max-width: 40ch;
+  margin: 4px 0 0;
+  color: var(--muted);
+  line-height: 1.76;
+}
+
+.layers-visual {
+  position: relative;
+  min-height: 180px;
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(18, 18, 24, 0.9), rgba(10, 10, 14, 0.9)),
+    rgba(255, 255, 255, 0.02);
+}
+
+.layers-visual-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.layers-visual-orbit,
+.layers-visual-node {
+  position: absolute;
+  border-radius: 999px;
+}
+
+.layers-visual-orbit {
+  border: 1px solid rgba(219, 84, 64, 0.28);
+}
+
+.orbit-primary {
+  top: 24px;
+  left: 38px;
+  width: 170px;
+  height: 170px;
+}
+
+.orbit-secondary {
+  right: 26px;
+  bottom: -10px;
+  width: 120px;
+  height: 120px;
+}
+
+.layers-visual-line {
+  position: absolute;
+  top: 86px;
+  left: 110px;
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(219, 84, 64, 0.72), rgba(219, 84, 64, 0.12));
+}
+
+.layers-visual-node {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  box-shadow: 0 0 0 8px rgba(185, 24, 41, 0.12);
+}
+
+.node-one {
+  top: 56px;
+  left: 88px;
+}
+
+.node-two {
+  top: 82px;
+  left: 208px;
+}
+
+.node-three {
+  bottom: 42px;
+  right: 92px;
+}
+
 .layers-grid {
   display: grid;
   grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1.12fr);
@@ -1102,18 +1192,12 @@ h3 {
   font-size: 0.82rem;
 }
 
-.ecosystem-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 24px;
-  align-items: end;
-}
-
 .partner-strip {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin-top: 18px;
 }
 
 .partner-strip span {
@@ -1149,7 +1233,79 @@ h3 {
 }
 
 .closing-copy h2 {
-  max-width: 9ch;
+  max-width: 12ch;
+}
+
+.title-intro {
+  max-width: 8.5ch;
+}
+
+.title-narrative {
+  max-width: 12ch;
+}
+
+.title-preview {
+  max-width: 10ch;
+}
+
+.title-layers {
+  max-width: 10ch;
+  font-size: clamp(2.65rem, 5vw, 4.3rem);
+  line-height: 0.98;
+}
+
+.title-workflow {
+  max-width: 10ch;
+}
+
+.title-audience {
+  max-width: 12ch;
+}
+
+.title-audience-secondary {
+  max-width: 11ch;
+  margin-top: 18px;
+}
+
+.title-closing {
+  max-width: 10ch;
+}
+
+.audience-kicker {
+  margin-top: 26px;
+}
+
+.manifesto-inline {
+  display: grid;
+  gap: 10px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.manifesto-inline h3 {
+  max-width: 18ch;
+  font-size: 2rem;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.workflow-head h2,
+.section-headline h2 {
+  max-width: 12ch;
+}
+
+.title-audience {
+  max-width: 13ch;
+}
+
+.layers-head h2 {
+  max-width: 10ch;
+}
+
+.statement-block h2 {
+  max-width: 8ch;
 }
 
 .waitlist-card {
@@ -1332,11 +1488,9 @@ h3 {
 @media (max-width: 1120px) {
   .hero-grid,
   .intro-panel,
-  .manifesto-panel,
   .narrative-panel,
   .preview-panel,
   .layers-grid,
-  .ecosystem-panel,
   .waitlist-card,
   .pillar-grid,
   .journey-grid,
@@ -1350,11 +1504,9 @@ h3 {
 
   .hero h1,
   .statement-block h2,
-  .manifesto-copy h2,
   .preview-copy h2,
   .layers-head h2,
   .workflow-head h2,
-  .ecosystem-copy h2,
   .section-headline h2,
   .closing-copy h2 {
     max-width: none;
@@ -1407,6 +1559,18 @@ h3 {
 
   .hero h1 {
     font-size: clamp(3.3rem, 18vw, 5.4rem);
+  }
+
+  .statement-block h2,
+  .preview-copy h2,
+  .layers-head h2,
+  .workflow-head h2,
+  .section-headline h2,
+  .closing-copy h2,
+  .narrative-flow h2 {
+    font-size: clamp(2.35rem, 12vw, 3.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
   }
 
   .metric-row,
