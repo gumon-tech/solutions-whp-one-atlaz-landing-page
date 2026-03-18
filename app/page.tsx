@@ -7,10 +7,22 @@ type Locale = "en" | "th";
 const imagery = {
   hero:
     "https://images.unsplash.com/photo-1638403286066-3ff648656a6a?auto=format&fit=crop&w=1800&q=80",
+  intro:
+    "https://images.unsplash.com/photo-1593058097945-4c6c8d09a6b1?auto=format&fit=crop&w=1800&q=80",
   narrative:
     "https://images.unsplash.com/photo-1757847112131-759d64e3466e?auto=format&fit=crop&w=1800&q=80",
   preview:
-    "https://images.unsplash.com/photo-1745244732535-594682ee2523?auto=format&fit=crop&w=1800&q=80"
+    "https://images.unsplash.com/photo-1745244732535-594682ee2523?auto=format&fit=crop&w=1800&q=80",
+  pillars:
+    "https://images.unsplash.com/photo-1698400603302-f16ad7688c6f?auto=format&fit=crop&w=1800&q=80",
+  layers:
+    "https://images.unsplash.com/photo-1677742331938-d826409dd889?auto=format&fit=crop&w=1800&q=80",
+  workflow:
+    "https://images.unsplash.com/photo-1724906019868-93ad2c79414f?auto=format&fit=crop&w=1800&q=80",
+  audience:
+    "https://images.unsplash.com/photo-1746021375306-9dec0f637732?auto=format&fit=crop&w=1800&q=80",
+  closing:
+    "https://images.unsplash.com/photo-1764083079454-27e446a6d4bc?auto=format&fit=crop&w=1800&q=80"
 };
 
 type Dictionary = {
@@ -76,8 +88,6 @@ type Dictionary = {
     items: string[];
   };
   audiences: {
-    kicker: string;
-    title: string;
     items: Array<{ label: string; text: string }>;
   };
   closing: {
@@ -91,6 +101,14 @@ type Dictionary = {
     cta: string;
     copied: string;
   };
+  footer: {
+    tagline: string;
+    navLabel: string;
+    links: Array<{ label: string; href: string }>;
+    contactLabel: string;
+    contactValue: string;
+    copyright: string;
+  };
 };
 
 const dictionaries: Record<Locale, Dictionary> = {
@@ -100,277 +118,287 @@ const dictionaries: Record<Locale, Dictionary> = {
       eyebrow: "One Platform. One Map.",
       title: "See the city as opportunity.",
       lead:
-        "One Atlaz is a global-first location economy platform connecting spatial intelligence, marketplace activity, place-based content, and deal flow in one operating system.",
+        "One Atlaz brings together spatial intelligence, market activity, place-based content, and deal execution in one platform.",
       primaryCta: "Explore Platform",
-      secondaryCta: "Request Access",
-      chips: ["Spatial Data", "Marketplace", "Content Layer", "Deal Flow"],
+      secondaryCta: "Get Early Access",
+      chips: ["Spatial Intelligence", "Market Activity", "Place Content", "Deal Execution"],
       metrics: [
-        { value: "Map-native", label: "Business intelligence" },
-        { value: "Cross-pillar", label: "Discovery to execution" },
-        { value: "Traceable", label: "Documents and workflow" }
+        { value: "Map-led", label: "Business intelligence" },
+        { value: "End-to-end", label: "From discovery to execution" },
+        { value: "Traceable", label: "Documents and deal progress" }
       ],
-      signalKicker: "Location Signal",
-      signalTitle: "Map + data + deal context",
-      trustKicker: "Trust Layer",
-      trustTitle: "Content anchored to place",
-      mapLabelLeft: "Global Layer",
+      signalKicker: "Opportunity View",
+      signalTitle: "Map, market, and deal activity",
+      trustKicker: "Content",
+      trustTitle: "Place-based stories and updates",
+      mapLabelLeft: "Global Platform",
       mapLabelRight: "Bangkok / APAC"
     },
     intro: {
-      kicker: "Strategic Positioning",
-      title: "A location platform, not another listing portal.",
+      kicker: "Why Teams Choose One Atlaz",
+      title: "One map for land, market, and deal activity.",
       copy:
-        "The brand should feel like infrastructure for business movement. One Atlaz helps operators understand context, identify opportunity, and move work forward on one shared location layer.",
-      quote: "The map is not a background. It is the operating surface.",
-      manifestoKicker: "Brand Frame",
-      manifestoTitle: "Built like an intelligence product. Framed like a global brand.",
+        "One Atlaz helps teams find opportunities faster, compare locations with confidence, and move deals forward in one place.",
+      quote: "Find it, assess it, move on it.",
+      manifestoKicker: "Why It Works",
+      manifestoTitle: "Everything your team needs, connected in one platform.",
       manifestoCopy:
-        "The visual system should project precision, confidence, and modern urban depth, never generic proptech. This is where parcel logic, market narrative, and transaction gravity meet."
+        "Land data, market movement, place-based content, and deal progress stay connected from the first search to the final decision."
     },
     narrative: {
-      kicker: "Scroll Narrative",
-      title: "Move through the city as layers become conviction.",
-      visualLabelLeft: "City Signal",
-      visualLabelRight: "Spatial x Market x Deal",
+      kicker: "How It Works",
+      title: "Search faster. Evaluate better. Move sooner.",
+      visualLabelLeft: "City View",
+      visualLabelRight: "Map x Market x Deal",
       steps: [
         {
           index: "01",
-          title: "Spatial Context",
-          description: "Start with parcels, corridors, density, and access. Let geography frame the first question."
+          title: "Search by place",
+          description: "Start with parcels, corridors, density, and access to narrow the right locations faster."
         },
         {
           index: "02",
-          title: "Urban Signal",
-          description: "Overlay zoning, planning momentum, and infrastructure to see what the market is not yet pricing correctly."
+          title: "Compare with confidence",
+          description: "Review zoning, infrastructure, and market movement side by side before you commit time or capital."
         },
         {
           index: "03",
-          title: "Business Action",
-          description: "Carry that insight into content, communication, and deal workflow without leaving the platform."
+          title: "Move the deal forward",
+          description: "Share information, align teams, and keep deal progress moving without leaving the platform."
         }
       ]
     },
     preview: {
-      kicker: "Signature Experience",
-      title: "A homepage that feels like market intelligence, not marketplace clutter.",
+      kicker: "Platform Overview",
+      title: "A clearer way to work with location-based opportunity.",
       copy:
-        "The first screen must establish three things immediately: One Atlaz understands geography, it is designed for serious operators, and it can move a user from insight to action.",
-      topbarLeft: "One Atlaz Console",
-      topbarRight: "Live Opportunity Surface",
+        "See land data, planning context, and deal activity in one view so your team can make faster, better-informed decisions.",
+      topbarLeft: "One Atlaz Workspace",
+      topbarRight: "Live Opportunity View",
       stats: [
         { value: "Parcel", label: "Land boundary and lot visibility" },
         { value: "Zoning", label: "Planning, regulation, and urban context" },
-        { value: "Deals", label: "Documents, negotiation, and workflow traceability" }
+        { value: "Deals", label: "Documents, negotiation, and deal traceability" }
       ]
     },
-    pillarsKicker: "Platform Pillars",
+    pillarsKicker: "What You Can Do",
     pillars: [
       {
         index: "01",
         title: "Map Intelligence",
-        description: "Read parcels, infrastructure, and urban context as one operational layer."
+        description: "View parcels, infrastructure, and city information in one map-based workspace."
       },
       {
         index: "02",
         title: "Market Discovery",
-        description: "Move from search to opportunity with structured listings and location-aware discovery."
+        description: "Find opportunities faster with structured listings and place-based search."
       },
       {
         index: "03",
         title: "Content and Trust",
-        description: "Turn place-based content into attention, credibility, and qualified lead flow."
+        description: "Present each opportunity with the context and updates people need to act."
       },
       {
         index: "04",
         title: "Deal Operations",
-        description: "Bring negotiation, documents, and business workflow into a traceable system."
+        description: "Keep documents, communication, and progress organized from first contact to close."
       }
     ],
     layers: {
-      kicker: "Data Architecture",
-      title: "Multiple layers, one operational surface.",
-      meta: ["Parcel Logic", "Zoning Overlay", "Market Context"],
+      kicker: "Everything in One Place",
+      title: "The data your team needs, connected in one view.",
+      meta: ["Parcel Structure", "Zoning Context", "Market Signals"],
       summary:
-        "Location data becomes more valuable when every layer can be read against the same opportunity surface.",
-      whyLabel: "Why it matters",
+        "Bring land, planning, market, and deal information together so teams can work from the same picture.",
+      whyLabel: "Why teams use it",
       why:
-        "When location becomes the shared reference point, discovery, analysis, communication, and transactions stop living in separate tools.",
+        "Instead of switching between disconnected tools, teams can review opportunities, share information, and move work forward in one platform.",
       items: [
         "Parcel and land boundaries",
         "Urban planning and zoning",
         "Infrastructure and future development projects",
         "Market listings and organization data",
-        "Pinned content and location feed",
+        "Pinned content and place-based updates",
         "Deal status, documents, and payment events"
       ]
     },
     workflow: {
-      kicker: "Workflow",
-      title: "From discovery to deal, in one narrative.",
+      kicker: "From Search to Deal",
+      title: "Go from first look to next step without losing momentum.",
       steps: [
         {
           index: "01",
           title: "Discover",
-          description: "Search by place, parcel, corridor, or signal-rich area instead of generic keywords alone."
+          description: "Search by place, parcel, or area to find the opportunities worth reviewing first."
         },
         {
           index: "02",
           title: "Understand",
-          description: "Overlay planning, infrastructure, market, and content signals to frame the real opportunity."
+          description: "Review planning, infrastructure, market information, and updates before making a call."
         },
         {
           index: "03",
           title: "Activate",
-          description: "Open communication, exchange documents, and turn intent into a structured business workflow."
+          description: "Share documents, coordinate conversations, and keep the deal moving with a clear next step."
         }
       ]
     },
     ecosystem: {
-      kicker: "Ecosystem Fit",
-      title: "Designed for the people who shape land, markets, and local narratives.",
+      kicker: "Who It's For",
+      title: "Built for teams working across land, investment, development, and sales.",
       items: ["Land Owners", "Investors", "Developers", "Brokers", "Creators", "Enterprise Teams"]
     },
     audiences: {
-      kicker: "Built For",
-      title: "Decision-makers across the location economy.",
       items: [
         {
           label: "Owners",
-          text: "Present assets with context, control disclosure, and move serious interest into workflow."
+          text: "Present assets clearly, control disclosures, and turn serious interest into active deals."
         },
         {
           label: "Investors",
-          text: "See opportunity through data layers, market signals, and transaction readiness."
+          text: "Assess opportunities faster with land, market, and transaction information in one place."
         },
         {
           label: "Developers",
-          text: "Evaluate land potential, communicate projects, and activate campaigns tied to place."
+          text: "Evaluate land potential, communicate projects, and move development plans with better information."
         },
         {
           label: "Operators",
-          text: "Keep teams aligned across map, marketplace, content, and deal execution."
+          text: "Keep teams aligned across maps, listings, content, and deal progress."
         }
       ]
     },
     closing: {
-      kicker: "Closing Frame",
-      title: "The interface for place-based opportunity at global scale.",
+      kicker: "Get Started",
+      title: "For teams working with place, data, and opportunity.",
       copy:
-        "Dark, map-native, and precise. One Atlaz should feel less like a website and more like a control layer for urban opportunity.",
-      accessKicker: "Request Access",
-      accessTitle: "Join the early access conversation.",
+        "One Atlaz brings map context, market movement, and deal progress into one interface.",
+      accessKicker: "Contact",
+      accessTitle: "Request early access.",
       accessCopy:
-        "For investors, land owners, developers, and strategic partners who want a clearer way to understand and activate location-based opportunity.",
+        "For investors, land owners, developers, and strategic partners exploring location-based opportunity.",
       emailPrompt:
-        "For request access, demo inquiries, or strategic partnership conversations, please email",
+        "For early access, demo inquiries, or strategic partnership conversations, please email",
       cta: "Copy email",
       copied: "Email copied"
+    },
+    footer: {
+      tagline: "A clearer interface for location-based opportunity.",
+      navLabel: "Navigate",
+      links: [
+        { label: "Platform", href: "#platform" },
+        { label: "Overview", href: "#preview" },
+        { label: "Access", href: "#waitlist" }
+      ],
+      contactLabel: "Contact",
+      contactValue: "hello@oneatlaz.com",
+      copyright: "© 2026 One Atlaz. All rights reserved."
     }
   },
   th: {
     navTagline: "แพลตฟอร์มเศรษฐกิจเชิงพื้นที่",
     hero: {
-      eyebrow: "One Platform. One Map.",
+      eyebrow: "หนึ่งแพลตฟอร์ม หนึ่งแผนที่",
       title: "มองเมืองให้เป็นโอกาส",
       lead:
-        "One Atlaz คือแพลตฟอร์มเศรษฐกิจเชิงพื้นที่ที่รวมข้อมูลทำเล การค้นหาโอกาส คอนเทนต์ที่ผูกกับพื้นที่ และกระบวนการดีลไว้ในระบบเดียว",
+        "One Atlaz รวมข้อมูลทำเล ความเคลื่อนไหวของตลาด คอนเทนต์ที่อิงกับสถานที่ และการขับเคลื่อนดีลไว้ในแพลตฟอร์มเดียว",
       primaryCta: "สำรวจแพลตฟอร์ม",
-      secondaryCta: "ขอสิทธิ์เข้าใช้งาน",
-      chips: ["ข้อมูลเชิงพื้นที่", "มาร์เก็ตเพลส", "คอนเทนต์ตามทำเล", "กระบวนการดีล"],
+      secondaryCta: "ขอเข้าใช้งานก่อน",
+      chips: ["ข้อมูลเชิงพื้นที่", "ความเคลื่อนไหวของตลาด", "คอนเทนต์ตามสถานที่", "การขับเคลื่อนดีล"],
       metrics: [
-        { value: "เกิดบนแผนที่", label: "มองภาพธุรกิจจาก location layer" },
-        { value: "เชื่อมทั้งระบบ", label: "จากการค้นหาไปสู่การลงมือทำ" },
-        { value: "ตรวจสอบได้", label: "เอกสาร สถานะ และ workflow ย้อนหลัง" }
+        { value: "เริ่มจากแผนที่", label: "มองภาพธุรกิจผ่านข้อมูลเชิงพื้นที่" },
+        { value: "เชื่อมครบวงจร", label: "จากการค้นหาไปสู่การขับเคลื่อนจริง" },
+        { value: "ตรวจสอบย้อนหลังได้", label: "เอกสาร สถานะ และความคืบหน้าของดีล" }
       ],
-      signalKicker: "สัญญาณทำเล",
-      signalTitle: "แผนที่ ข้อมูล และบริบทของดีล",
-      trustKicker: "ชั้นของความน่าเชื่อถือ",
-      trustTitle: "คอนเทนต์ที่เชื่อมกับสถานที่จริง",
-      mapLabelLeft: "โครงสร้างข้อมูลกลาง",
-      mapLabelRight: "Bangkok / APAC"
+      signalKicker: "ภาพรวมโอกาส",
+      signalTitle: "แผนที่ ตลาด และความเคลื่อนไหวของดีล",
+      trustKicker: "คอนเทนต์",
+      trustTitle: "เรื่องราวและอัปเดตที่ผูกกับพื้นที่จริง",
+      mapLabelLeft: "แพลตฟอร์มระดับสากล",
+      mapLabelRight: "กรุงเทพฯ / เอเชียแปซิฟิก"
     },
     intro: {
-      kicker: "ตำแหน่งของแบรนด์",
-      title: "นี่คือ location platform ไม่ใช่เว็บประกาศทั่วไป",
+      kicker: "เหตุผลที่ทีมเลือก One Atlaz",
+      title: "แผนที่เดียว\nสำหรับที่ดิน\nตลาด และดีล",
       copy:
-        "ภาพลักษณ์ของ One Atlaz ควรให้ความรู้สึกเหมือนโครงสร้างพื้นฐานสำหรับการขับเคลื่อนธุรกิจ ไม่ใช่เพียงพื้นที่แสดงรายการทรัพย์ แต่เป็นระบบที่ช่วยให้ผู้ใช้งานเข้าใจบริบท เห็นโอกาส และทำงานต่อบน location layer เดียวกัน",
-      quote: "แผนที่ไม่ใช่พื้นหลัง แต่มันคือผิวการทำงานของทั้งแพลตฟอร์ม",
-      manifestoKicker: "กรอบของแบรนด์",
-      manifestoTitle: "ต้องมีทั้งความแม่นยำแบบเครื่องมือ และความน่าเชื่อถือแบบแบรนด์ระดับสากล",
+        "One Atlaz ช่วยให้ทีมค้นหาโอกาสได้เร็วขึ้น เปรียบเทียบทำเลได้มั่นใจขึ้น และขยับดีลต่อได้ในที่เดียว",
+      quote: "หาให้เจอ ประเมินให้ชัด แล้วเดินหน้าต่อ",
+      manifestoKicker: "ทำไมถึงตอบโจทย์",
+      manifestoTitle: "ทุกอย่างที่ทีมต้องใช้ เชื่อมต่อกันในแพลตฟอร์มเดียว",
       manifestoCopy:
-        "งานภาพต้องสื่อความแม่นยำ ความมั่นใจ และความลึกเชิงเมืองแบบร่วมสมัย ไม่ควรดูเป็น proptech ทั่วไป แต่ต้องรู้สึกว่าข้อมูลที่ดิน ตลาด และธุรกรรมมาบรรจบกันบนระบบเดียว"
+        "ข้อมูลที่ดิน ความเคลื่อนไหวของตลาด คอนเทนต์ และความคืบหน้าของดีลเชื่อมต่อกันตั้งแต่การค้นหาครั้งแรกจนถึงการตัดสินใจ"
     },
     narrative: {
-      kicker: "เรื่องเล่าระหว่างเลื่อนหน้า",
-      title: "เลื่อนผ่านเมือง เห็นข้อมูลค่อย ๆ กลายเป็นความมั่นใจในการตัดสินใจ",
-      visualLabelLeft: "สัญญาณของเมือง",
-      visualLabelRight: "ทำเล x ตลาด x ดีล",
+      kicker: "วิธีใช้งาน",
+      title: "ค้นหาไว ประเมินแม่น และเดินหน้าต่อได้เร็ว",
+      visualLabelLeft: "ภาพรวมเมือง",
+      visualLabelRight: "แผนที่ x ตลาด x ดีล",
       steps: [
         {
           index: "01",
-          title: "บริบทของพื้นที่",
-          description: "เริ่มจากขอบเขตแปลง แนวถนน ความหนาแน่น และการเข้าถึง ให้ภูมิศาสตร์เป็นตัวตั้งของคำถามแรก"
+          title: "ค้นหาจากทำเล",
+          description: "เริ่มจากแปลงที่ดิน แนวเส้นทาง ความหนาแน่น และการเข้าถึง เพื่อคัดกรองพื้นที่ที่ควรดูต่อ"
         },
         {
           index: "02",
-          title: "สัญญาณของเมือง",
-          description: "ซ้อนผังเมือง แนวโน้มการพัฒนา และโครงสร้างพื้นฐาน เพื่อเห็นสิ่งที่ตลาดยังตีราคาไม่ครบ"
+          title: "เปรียบเทียบได้มั่นใจ",
+          description: "ดูผังเมือง โครงสร้างพื้นฐาน และความเคลื่อนไหวของตลาดควบคู่กันก่อนตัดสินใจ"
         },
         {
           index: "03",
-          title: "การลงมือทำทางธุรกิจ",
-          description: "ต่อยอด insight ไปสู่คอนเทนต์ การสื่อสาร และกระบวนการดีล โดยไม่ต้องออกจากแพลตฟอร์ม"
+          title: "ขยับดีลต่อได้ทันที",
+          description: "แชร์ข้อมูล ประสานทีม และเดินหน้าดีลต่อได้โดยไม่ต้องสลับเครื่องมือ"
         }
       ]
     },
     preview: {
-      kicker: "ประสบการณ์หลักของแพลตฟอร์ม",
-      title: "หน้าแรกต้องให้ความรู้สึกเหมือนศูนย์บัญชาการข้อมูล ไม่ใช่หน้ารวมประกาศที่รก",
+      kicker: "ภาพรวมแพลตฟอร์ม",
+      title: "วิธีที่ชัดกว่าในการทำงานกับโอกาสตามทำเล",
       copy:
-        "ผู้ใช้งานควรรับรู้ตั้งแต่หน้าจอแรกว่าแพลตฟอร์มนี้เข้าใจภูมิศาสตร์ ถูกออกแบบมาสำหรับมืออาชีพ และสามารถพาผู้ใช้จาก insight ไปสู่ action ได้จริง",
+        "เห็นข้อมูลที่ดิน ผังเมือง และความเคลื่อนไหวของดีลในมุมมองเดียว เพื่อให้ทีมตัดสินใจได้เร็วและแม่นยำขึ้น",
       topbarLeft: "ศูนย์ควบคุม One Atlaz",
-      topbarRight: "พื้นผิวของโอกาสแบบเรียลไทม์",
+      topbarRight: "มุมมองโอกาสแบบเรียลไทม์",
       stats: [
         { value: "แปลงที่ดิน", label: "เห็นขอบเขตแปลงและข้อมูลที่ดินได้ชัดเจน" },
         { value: "ผังเมือง", label: "อ่านข้อกำหนด กติกา และบริบทของพื้นที่" },
         { value: "ดีล", label: "เชื่อมเอกสาร การเจรจา และสถานะของงาน" }
       ]
     },
-    pillarsKicker: "เสาหลักของแพลตฟอร์ม",
+    pillarsKicker: "สิ่งที่ทำได้",
     pillars: [
       {
         index: "01",
         title: "ความฉลาดของแผนที่",
-        description: "มองแปลงที่ดิน โครงสร้างพื้นฐาน และบริบทเมืองบนพื้นที่ทำงานเดียวกัน"
+        description: "ดูแปลงที่ดิน โครงสร้างพื้นฐาน และข้อมูลเมืองบนแผนที่เดียวกัน"
       },
       {
         index: "02",
         title: "การค้นพบตลาด",
-        description: "เปลี่ยนจากการค้นหาไปสู่การคัดเลือกโอกาส ด้วยรายการทรัพย์และการค้นพบที่อิงกับทำเล"
+        description: "ค้นหาโอกาสได้เร็วขึ้นด้วยรายการทรัพย์และการค้นหาที่อิงกับทำเล"
       },
       {
         index: "03",
         title: "คอนเทนต์และความน่าเชื่อถือ",
-        description: "ให้คอนเทนต์ที่ผูกกับพื้นที่สร้างความเชื่อมั่น ความสนใจ และโอกาสทางธุรกิจที่มีคุณภาพ"
+        description: "นำเสนอแต่ละโอกาสด้วยข้อมูลและอัปเดตที่ช่วยให้ตัดสินใจได้ง่ายขึ้น"
       },
       {
         index: "04",
         title: "การขับเคลื่อนดีล",
-        description: "รวมการสื่อสาร เอกสาร และขั้นตอนทางธุรกิจไว้ในระบบที่ตรวจสอบย้อนหลังได้"
+        description: "จัดการเอกสาร การสื่อสาร และความคืบหน้าของดีลตั้งแต่ต้นจนจบ"
       }
     ],
     layers: {
-      kicker: "โครงสร้างข้อมูล",
-      title: "หลายชั้นข้อมูล แต่ทำงานบนผิวระบบเดียวกัน",
+      kicker: "ทุกข้อมูลในที่เดียว",
+      title: "ข้อมูลที่ทีมต้องใช้ เชื่อมต่อกันในมุมมองเดียว",
       meta: ["ตรรกะของแปลง", "ชั้นข้อมูลผังเมือง", "บริบทของตลาด"],
       summary:
-        "ข้อมูลเชิงพื้นที่จะมีมูลค่ามากขึ้น เมื่อทุกชั้นข้อมูลถูกอ่านเทียบกันบนผิวของโอกาสเดียวกัน",
-      whyLabel: "เหตุผลที่สำคัญ",
+        "รวมข้อมูลที่ดิน ผังเมือง ตลาด และดีลไว้ด้วยกัน เพื่อให้ทุกคนทำงานจากภาพเดียวกัน",
+      whyLabel: "เหตุผลที่ทีมเลือกใช้",
       why:
-        "เมื่อ location กลายเป็นจุดอ้างอิงร่วม การค้นหา การวิเคราะห์ การสื่อสาร และการทำธุรกรรมจะไม่กระจัดกระจายอยู่ในหลายเครื่องมืออีกต่อไป",
+        "แทนที่จะสลับหลายเครื่องมือ ทีมสามารถดูโอกาส แชร์ข้อมูล และเดินหน้างานต่อได้ในแพลตฟอร์มเดียว",
       items: [
         "ขอบเขตแปลงและข้อมูลที่ดิน",
-        "ผังเมืองและ zoning",
+        "ผังเมืองและข้อกำหนดการใช้ประโยชน์ที่ดิน",
         "โครงสร้างพื้นฐานและโครงการอนาคต",
         "ข้อมูลตลาดและข้อมูลองค์กร",
         "คอนเทนต์ที่ปักหมุดบนแผนที่",
@@ -378,66 +406,76 @@ const dictionaries: Record<Locale, Dictionary> = {
       ]
     },
     workflow: {
-      kicker: "ลำดับการทำงาน",
-      title: "จากการค้นพบ ไปสู่การทำดีล ในเรื่องราวเดียวกัน",
+      kicker: "จากการค้นหาสู่การทำดีล",
+      title: "ดูโอกาสแรกจนถึงขั้นตอนถัดไปได้ต่อเนื่อง",
       steps: [
         {
           index: "01",
-          title: "Discover",
-          description: "ค้นหาด้วยพื้นที่ แปลงที่ดิน corridor หรือบริเวณที่มีสัญญาณโอกาสสูง ไม่ใช่แค่คีย์เวิร์ดทั่วไป"
+          title: "ค้นหา",
+          description: "ค้นหาด้วยพื้นที่ แปลงที่ดิน หรือย่านที่น่าสนใจ เพื่อเจอโอกาสที่ควรดูต่อก่อน"
         },
         {
           index: "02",
-          title: "Understand",
-          description: "ซ้อนข้อมูลผังเมือง โครงสร้างพื้นฐาน ตลาด และคอนเทนต์ เพื่อเห็นบริบทของโอกาสอย่างครบขึ้น"
+          title: "ทำความเข้าใจ",
+          description: "ดูผังเมือง โครงสร้างพื้นฐาน ข้อมูลตลาด และอัปเดตที่เกี่ยวข้องก่อนตัดสินใจ"
         },
         {
           index: "03",
-          title: "Activate",
-          description: "เปิดการสื่อสาร แลกเปลี่ยนเอกสาร และเปลี่ยนความสนใจให้กลายเป็น workflow ทางธุรกิจที่ชัดเจน"
+          title: "ขับเคลื่อน",
+          description: "แชร์เอกสาร ประสานการทำงาน และพาดีลไปสู่ขั้นตอนถัดไปอย่างชัดเจน"
         }
       ]
     },
     ecosystem: {
-      kicker: "ผู้เล่นในระบบ",
-      title: "ออกแบบมาสำหรับคนที่กำลังกำหนดอนาคตของที่ดิน ตลาด และเรื่องเล่าของพื้นที่",
+      kicker: "เหมาะสำหรับ",
+      title: "สร้างมาสำหรับทีมที่ทำงานกับที่ดิน การลงทุน การพัฒนา และการขาย",
       items: ["เจ้าของที่ดิน", "นักลงทุน", "นักพัฒนา", "โบรกเกอร์", "ครีเอเตอร์", "ทีมองค์กร"]
     },
     audiences: {
-      kicker: "เหมาะสำหรับ",
-      title: "สำหรับผู้ตัดสินใจใน location economy",
       items: [
         {
           label: "เจ้าของทรัพย์",
-          text: "นำเสนอทรัพย์พร้อมบริบท ควบคุมการเปิดเผยข้อมูล และเปลี่ยนความสนใจจริงให้เข้าสู่ workflow ได้ดีขึ้น"
+          text: "นำเสนอทรัพย์ให้ชัด ควบคุมการเปิดเผยข้อมูล และเปลี่ยนความสนใจจริงให้กลายเป็นดีล"
         },
         {
           label: "นักลงทุน",
-          text: "มองเห็นศักยภาพผ่าน data layers สัญญาณตลาด และความพร้อมของธุรกรรมได้เร็วขึ้น"
+          text: "ประเมินโอกาสได้เร็วขึ้นด้วยข้อมูลที่ดิน ข้อมูลตลาด และความพร้อมของธุรกรรมในที่เดียว"
         },
         {
           label: "นักพัฒนา",
-          text: "ประเมินศักยภาพที่ดิน สื่อสารโครงการ และขับเคลื่อนแคมเปญที่ผูกกับพื้นที่จริง"
+          text: "ประเมินศักยภาพที่ดิน สื่อสารโครงการ และเดินหน้าแผนพัฒนาด้วยข้อมูลที่พร้อมกว่า"
         },
         {
           label: "ทีมปฏิบัติการ",
-          text: "ทำให้ทีมทำงานสอดคล้องกันระหว่างแผนที่ marketplace content และการขับเคลื่อนดีล"
+          text: "ทำให้ทีมทำงานตรงกันระหว่างแผนที่ รายการทรัพย์ คอนเทนต์ และความคืบหน้าของดีล"
         }
       ]
     },
     closing: {
-      kicker: "สารสรุป",
-      title: "อินเทอร์เฟซสำหรับโอกาสที่ขับเคลื่อนด้วยสถานที่ในระดับสากล",
+      kicker: "เริ่มต้นกับ One Atlaz",
+      title: "สำหรับทีมที่ต้องการเห็นโอกาสเร็วขึ้นและขยับดีลได้ชัดขึ้น",
       copy:
-        "One Atlaz ควรให้ความรู้สึกเข้ม คม และ map-native ราวกับเป็น control layer สำหรับโอกาสในเมือง ไม่ใช่แค่เว็บไซต์อีกหนึ่งหน้า",
-      accessKicker: "ติดต่อเพื่อเริ่มต้น",
-      accessTitle: "เริ่มบทสนทนาเพื่อเข้าใช้งานก่อน",
+        "One Atlaz รวมข้อมูลแผนที่ ตลาด และดีลไว้ในที่เดียว เพื่อให้ทีมตัดสินใจและเดินหน้างานได้เร็วขึ้น",
+      accessKicker: "ติดต่อเรา",
+      accessTitle: "ขอเข้าใช้งานก่อน",
       accessCopy:
-        "สำหรับนักลงทุน เจ้าของที่ดิน นักพัฒนา และพันธมิตรเชิงกลยุทธ์ที่ต้องการมองและขับเคลื่อนโอกาสเชิงพื้นที่ได้ชัดเจนยิ่งขึ้น",
+        "สำหรับนักลงทุน เจ้าของที่ดิน นักพัฒนา และพันธมิตรที่ต้องการทำงานกับโอกาสตามทำเลได้ชัดเจนขึ้น",
       emailPrompt:
         "หากต้องการขอสิทธิ์เข้าใช้งาน ขอเดโม หรือพูดคุยเรื่องความร่วมมือ กรุณาส่งอีเมลมาที่",
       cta: "คัดลอกอีเมล",
       copied: "คัดลอกอีเมลแล้ว"
+    },
+    footer: {
+      tagline: "อินเทอร์เฟซที่ชัดกว่า สำหรับการทำงานกับโอกาสตามทำเล",
+      navLabel: "ไปยังส่วนต่าง ๆ",
+      links: [
+        { label: "แพลตฟอร์ม", href: "#platform" },
+        { label: "ภาพรวม", href: "#preview" },
+        { label: "ขอเข้าใช้งาน", href: "#waitlist" }
+      ],
+      contactLabel: "ติดต่อ",
+      contactValue: "hello@oneatlaz.com",
+      copyright: "© 2026 One Atlaz สงวนลิขสิทธิ์"
     }
   }
 };
@@ -462,10 +500,23 @@ function LogoMark() {
   );
 }
 
+function renderTitle(title: string) {
+  const lines = title.split("\n");
+  const className = lines.length > 1 ? "title-line title-line-locked" : "title-line";
+
+  return lines.map((line, index) => (
+    <span className={className} key={`${line}-${index}`}>
+      {line}
+    </span>
+  ));
+}
+
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("en");
   const [copied, setCopied] = useState(false);
   const t = dictionaries[locale];
+  const heroTitle =
+    locale === "th" ? "มองเมือง\nให้เป็นโอกาส" : "See the city\nas opportunity.";
 
   useEffect(() => {
     document.documentElement.lang = locale === "th" ? "th" : "en";
@@ -484,7 +535,11 @@ export default function Home() {
   return (
     <main className={`page-shell locale-${locale}`}>
       <header className="topbar">
-        <a className="brand" href="#top" aria-label="One Atlaz home">
+        <a
+          className="brand"
+          href="#top"
+          aria-label={locale === "th" ? "หน้าแรก One Atlaz" : "One Atlaz home"}
+        >
           <LogoMark />
           <div className="brand-copy">
             <strong>One Atlaz</strong>
@@ -492,7 +547,10 @@ export default function Home() {
           </div>
         </a>
 
-        <div className="locale-switch" aria-label="Language switcher">
+        <div
+          className="locale-switch"
+          aria-label={locale === "th" ? "สลับภาษา" : "Language switcher"}
+        >
           <button
             className={locale === "en" ? "locale-button active" : "locale-button"}
             onClick={() => setLocale("en")}
@@ -510,10 +568,10 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="hero hero-grid" id="top">
+      <section className="hero hero-grid section-tone-hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">{t.hero.eyebrow}</p>
-          <h1>{t.hero.title}</h1>
+          <h1>{renderTitle(heroTitle)}</h1>
           <p className="lead">{t.hero.lead}</p>
 
           <div className="actions">
@@ -525,7 +583,10 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="hero-strip" aria-label="Platform capabilities">
+          <div
+            className="hero-strip"
+            aria-label={locale === "th" ? "ความสามารถหลักของแพลตฟอร์ม" : "Platform capabilities"}
+          >
             {t.hero.chips.map((chip) => (
               <span key={chip}>{chip}</span>
             ))}
@@ -571,14 +632,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section intro-panel" id="platform">
+      <section className="section intro-panel section-tone-warm" id="platform">
         <div className="statement-block">
           <p className="section-kicker">{t.intro.kicker}</p>
-          <h2 className="title-intro">{t.intro.title}</h2>
-        </div>
-        <div className="statement-side">
+          <h2 className="title-intro">{renderTitle(t.intro.title)}</h2>
           <p className="section-copy">{t.intro.copy}</p>
           <blockquote className="quote-card">{t.intro.quote}</blockquote>
+        </div>
+        <div className="statement-side">
+          <div className="section-media-card intro-media" aria-hidden="true">
+            <img className="section-photo" src={imagery.intro} alt="" />
+            <div className="section-photo-overlay" />
+          </div>
           <div className="manifesto-inline">
             <p className="section-kicker">{t.intro.manifestoKicker}</p>
             <h3>{t.intro.manifestoTitle}</h3>
@@ -587,14 +652,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section narrative-panel">
+      <section className="section narrative-panel section-tone-neutral">
         <div className="narrative-sticky">
           <div className="narrative-visual">
             <div className="narrative-visual-header">
               <span>{t.narrative.visualLabelLeft}</span>
               <span>{t.narrative.visualLabelRight}</span>
             </div>
-            <img className="scene-image" src={imagery.narrative} alt="Aerial city view at night" />
+            <img className="scene-image" src={imagery.narrative} alt="" />
             <div className="scene-overlay" />
           </div>
         </div>
@@ -614,7 +679,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section preview-panel" id="preview">
+      <section className="section preview-panel section-tone-cool" id="preview">
         <div className="preview-copy">
           <p className="section-kicker">{t.preview.kicker}</p>
           <h2 className="title-preview">{t.preview.title}</h2>
@@ -627,7 +692,7 @@ export default function Home() {
             <span>{t.preview.topbarRight}</span>
           </div>
           <div className="preview-asset-frame">
-            <img className="preview-asset" src={imagery.preview} alt="Night city skyline with red highlights" />
+            <img className="preview-asset" src={imagery.preview} alt="" />
           </div>
           <div className="preview-body">
             <div className="preview-map">
@@ -650,51 +715,71 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section pillar-shell">
+      <section className="section pillar-shell section-tone-neutral">
         <div className="section-headline">
           <p className="section-kicker">{t.pillarsKicker}</p>
         </div>
-        <div className="pillar-grid">
-          {t.pillars.map((pillar, index) => (
-            <article
-              className={index === 0 ? "panel-card feature-large" : "panel-card"}
-              key={pillar.title}
-            >
-              <p className="panel-index">{pillar.index}</p>
-              <h3>{pillar.title}</h3>
-              <p>{pillar.description}</p>
+        <div className="pillar-top">
+          <div className="pillar-stack">
+            <article className="panel-card feature-large" key={t.pillars[0].title}>
+              <p className="panel-index">{t.pillars[0].index}</p>
+              <h3>{t.pillars[0].title}</h3>
+              <p>{t.pillars[0].description}</p>
             </article>
-          ))}
+            <article className="panel-card pillar-support" key={t.pillars[1].title}>
+              <p className="panel-index">{t.pillars[1].index}</p>
+              <h3>{t.pillars[1].title}</h3>
+              <p>{t.pillars[1].description}</p>
+            </article>
+            {t.pillars.slice(2).map((pillar) => (
+              <article className="panel-card pillar-support" key={pillar.title}>
+                <p className="panel-index">{pillar.index}</p>
+                <h3>{pillar.title}</h3>
+                <p>{pillar.description}</p>
+              </article>
+            ))}
+          </div>
+          <div className="section-media-card pillar-banner" aria-hidden="true">
+            <img className="section-photo" src={imagery.pillars} alt="" />
+            <div className="section-photo-overlay" />
+          </div>
         </div>
       </section>
 
-      <section className="section layers-panel" id="layers">
-        <div className="layers-head">
-          <p className="section-kicker">{t.layers.kicker}</p>
-          <h2 className="title-layers">{t.layers.title}</h2>
-          <div className="layers-meta">
-            {t.layers.meta.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
+      <section className="section layers-panel section-tone-warm" id="layers">
+        <div className="layers-top">
+          <div className="layers-head">
+            <p className="section-kicker">{t.layers.kicker}</p>
+            <h2 className="title-layers">{t.layers.title}</h2>
+            <div className="layers-meta">
+              {t.layers.meta.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+            <p className="layers-copy">{t.layers.summary}</p>
           </div>
-          <p className="layers-copy">{t.layers.summary}</p>
-          <div className="layers-visual" aria-hidden="true">
-            <div className="layers-visual-grid" />
-            <div className="layers-visual-orbit orbit-primary" />
-            <div className="layers-visual-orbit orbit-secondary" />
-            <div className="layers-visual-line" />
-            <div className="layers-visual-node node-one" />
-            <div className="layers-visual-node node-two" />
-            <div className="layers-visual-node node-three" />
+
+          <div className="layers-side">
+            <div className="layers-visual" aria-hidden="true">
+              <img className="section-photo" src={imagery.layers} alt="" />
+              <div className="section-photo-overlay" />
+              <div className="layers-visual-grid" />
+              <div className="layers-visual-orbit orbit-primary" />
+              <div className="layers-visual-orbit orbit-secondary" />
+              <div className="layers-visual-line" />
+              <div className="layers-visual-node node-one" />
+              <div className="layers-visual-node node-two" />
+              <div className="layers-visual-node node-three" />
+            </div>
+
+            <article className="panel-card panel-emphasis">
+              <p className="mini-label">{t.layers.whyLabel}</p>
+              <p className="statement">{t.layers.why}</p>
+            </article>
           </div>
         </div>
 
         <div className="layers-grid">
-          <article className="panel-card panel-emphasis">
-            <p className="mini-label">{t.layers.whyLabel}</p>
-            <p className="statement">{t.layers.why}</p>
-          </article>
-
           <div className="layer-list">
             {t.layers.items.map((layer) => (
               <div className="layer-item" key={layer}>
@@ -706,10 +791,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section workflow-panel">
-        <div className="workflow-head">
-          <p className="section-kicker">{t.workflow.kicker}</p>
-          <h2 className="title-workflow">{t.workflow.title}</h2>
+      <section className="section workflow-panel section-tone-cool">
+        <div className="workflow-top">
+          <div className="workflow-head">
+            <p className="section-kicker">{t.workflow.kicker}</p>
+            <h2 className="title-workflow">{t.workflow.title}</h2>
+          </div>
+          <div className="section-media-card workflow-visual" aria-hidden="true">
+            <img className="section-photo" src={imagery.workflow} alt="" />
+            <div className="section-photo-overlay" />
+          </div>
         </div>
 
         <div className="journey-grid">
@@ -723,17 +814,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section audience-panel">
-        <div className="section-headline">
-          <p className="section-kicker">{t.ecosystem.kicker}</p>
-          <h2 className="title-audience">{t.ecosystem.title}</h2>
-          <div className="partner-strip" aria-label="Partner types">
-            {t.ecosystem.items.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
+      <section className="section audience-panel section-tone-neutral">
+        <div className="audience-top">
+          <div className="section-headline">
+            <p className="section-kicker">{t.ecosystem.kicker}</p>
+            <h2 className="title-audience">{t.ecosystem.title}</h2>
+            <div
+              className="partner-strip"
+              aria-label={locale === "th" ? "กลุ่มผู้ใช้งานและพันธมิตร" : "Audience and partner types"}
+            >
+              {t.ecosystem.items.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
           </div>
-          <p className="section-kicker audience-kicker">{t.audiences.kicker}</p>
-          <h2 className="title-audience-secondary">{t.audiences.title}</h2>
+          <div className="audience-side">
+            <div className="section-media-card audience-visual" aria-hidden="true">
+              <img className="section-photo" src={imagery.audience} alt="" />
+              <div className="section-photo-overlay" />
+            </div>
+          </div>
         </div>
         <div className="audience-grid">
           {t.audiences.items.map((audience) => (
@@ -745,18 +845,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section closing-panel" id="waitlist">
-        <div className="closing-copy">
-          <p className="section-kicker">{t.closing.kicker}</p>
-          <h2 className="title-closing">{t.closing.title}</h2>
-          <p className="section-copy">{t.closing.copy}</p>
+      <section className="section closing-panel section-tone-warm" id="waitlist">
+        <div className="closing-top">
+          <div className="closing-copy">
+            <p className="section-kicker">{t.closing.kicker}</p>
+            <h2 className="title-closing">{t.closing.title}</h2>
+            <p className="section-copy">{t.closing.copy}</p>
+          </div>
+          <div className="section-media-card closing-visual" aria-hidden="true">
+            <img className="section-photo" src={imagery.closing} alt="" />
+            <div className="section-photo-overlay" />
+          </div>
         </div>
 
         <div className="waitlist-card">
-          <div>
-            <p className="mini-label">{t.closing.accessKicker}</p>
-            <h3>{t.closing.accessTitle}</h3>
-            <p className="section-copy">{t.closing.accessCopy}</p>
+          <div className="closing-story">
+            <div>
+              <p className="mini-label">{t.closing.accessKicker}</p>
+              <h3>{t.closing.accessTitle}</h3>
+              <p className="section-copy">{t.closing.accessCopy}</p>
+            </div>
           </div>
 
           <div className="contact-card">
@@ -773,6 +881,45 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <footer className="site-footer">
+        <div className="footer-brand">
+          <a
+            className="brand footer-brand-link"
+            href="#top"
+            aria-label={locale === "th" ? "กลับไปด้านบน" : "Back to top"}
+          >
+            <LogoMark />
+            <div className="brand-copy">
+              <strong>One Atlaz</strong>
+              <span>{t.navTagline}</span>
+            </div>
+          </a>
+          <p className="footer-tagline">{t.footer.tagline}</p>
+          <p className="footer-copy-feedback">{t.footer.copyright}</p>
+        </div>
+
+        <nav className="footer-column" aria-label={t.footer.navLabel}>
+          <p className="footer-label">{t.footer.navLabel}</p>
+          <div className="footer-links">
+            {t.footer.links.map((link) => (
+              <a key={link.href} href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </nav>
+
+        <div className="footer-column">
+          <p className="footer-label">{t.footer.contactLabel}</p>
+          <button className="footer-email" type="button" onClick={handleCopyEmail}>
+            {t.footer.contactValue}
+          </button>
+          <p className="footer-email-status" aria-live="polite">
+            {copied ? t.closing.copied : "\u00A0"}
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
