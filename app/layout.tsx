@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
 import {
-  Cormorant_Garamond,
-  Manrope,
+  Inter,
   Noto_Sans_Thai,
-  Noto_Serif_Thai
+  Noto_Sans_Thai_Looped
 } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Cormorant_Garamond({
+const displayFont = Inter({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700"]
+  weight: ["500", "600", "700", "800"]
 });
 
-const bodyFont = Manrope({
+const bodyFont = Inter({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["400", "500", "600", "700"]
+  weight: ["400", "500", "600", "700", "800"]
 });
 
 const thaiBodyFont = Noto_Sans_Thai({
@@ -25,7 +24,7 @@ const thaiBodyFont = Noto_Sans_Thai({
   weight: ["400", "500", "600", "700"]
 });
 
-const thaiDisplayFont = Noto_Serif_Thai({
+const thaiDisplayFont = Noto_Sans_Thai_Looped({
   subsets: ["thai"],
   variable: "--font-display-th",
   weight: ["500", "600", "700"]
@@ -33,21 +32,26 @@ const thaiDisplayFont = Noto_Serif_Thai({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://oneatlaz.com"),
-  title: "One Atlaz | The Location Economy Platform",
+  title: {
+    default: "One Atlaz",
+    template: "%s | One Atlaz"
+  },
+  applicationName: "One Atlaz",
   description:
-    "A global-first platform for spatial intelligence, marketplace discovery, content, and deal flow.",
+    "One Atlaz brings land intelligence, market context, place-based insight, and deal workflow into one map-first platform.",
   openGraph: {
-    title: "One Atlaz | The Location Economy Platform",
+    title: "One Atlaz",
     description:
-      "A global-first platform for spatial intelligence, marketplace discovery, content, and deal flow.",
-    images: ["/og-image.svg"]
+      "One Atlaz brings land intelligence, market context, place-based insight, and deal workflow into one map-first platform.",
+    siteName: "One Atlaz",
+    images: ["/og-image-th.svg"]
   },
   twitter: {
     card: "summary_large_image",
-    title: "One Atlaz | The Location Economy Platform",
+    title: "One Atlaz",
     description:
-      "A global-first platform for spatial intelligence, marketplace discovery, content, and deal flow.",
-    images: ["/og-image.svg"]
+      "One Atlaz brings land intelligence, market context, place-based insight, and deal workflow into one map-first platform.",
+    images: ["/og-image-th.svg"]
   },
   icons: {
     icon: "/icon.svg",
@@ -62,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="th">
       <body
         className={`${displayFont.variable} ${bodyFont.variable} ${thaiBodyFont.variable} ${thaiDisplayFont.variable}`}
       >
