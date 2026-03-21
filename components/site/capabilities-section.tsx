@@ -33,11 +33,11 @@ export function CapabilitiesSection({
 
         <div className="photo-frame photo-frame-tall">
           <Image
-            alt={locale === "th" ? "ภาพเมืองภูเก็ตย่านเมืองเก่า" : "Phuket old town"}
+            alt={locale === "th" ? "ภาพถนนย่านเมืองเก่าภูเก็ต" : "Street view in Phuket old town"}
             className="section-photo"
             fill
             sizes="(max-width: 960px) 100vw, 36vw"
-            src="/thailand-scenes/phuket-old-town.jpg"
+            src="/scene-crops/capabilities-phuket-town-4x5.jpg"
           />
           <div className="photo-overlay" />
         </div>

@@ -29,11 +29,11 @@ export function OverviewSection({
       <div className="visual-stack">
         <div className="photo-frame photo-frame-mid">
           <Image
-            alt={locale === "th" ? "ภาพมุมสูงเมืองเชียงใหม่" : "Chiang Mai panorama"}
+            alt={locale === "th" ? "ภาพมุมสูงกรุงเทพมหานครริมแม่น้ำ" : "Bangkok aerial view by the river"}
             className="section-photo"
             fill
             sizes="(max-width: 960px) 100vw, 44vw"
-            src="/thailand-scenes/chiang-mai-panorama.jpg"
+            src="/scene-crops/overview-bangkok-aerial-16x10.jpg"
           />
           <div className="photo-overlay" />
         </div>

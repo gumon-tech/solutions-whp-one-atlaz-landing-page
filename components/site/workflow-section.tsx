@@ -23,11 +23,11 @@ export function WorkflowSection({
       <div className="workflow-layout">
         <div className="photo-frame photo-frame-wide">
           <Image
-            alt={locale === "th" ? "ภาพชายหาดพัทยา" : "Pattaya beach"}
+            alt={locale === "th" ? "ภาพมุมสูงกรุงเทพริมแม่น้ำ" : "Bangkok riverside aerial view"}
             className="section-photo"
             fill
             sizes="(max-width: 960px) 100vw, 42vw"
-            src="/thailand-scenes/pattaya-beach.jpg"
+            src="/scene-crops/workflow-bangkok-river-16x10.jpg"
           />
           <div className="photo-overlay" />
         </div>

@@ -47,12 +47,12 @@ export function HeroSection({
       <div className="hero-visual">
         <div className="photo-frame photo-frame-hero">
           <Image
-            alt={locale === "th" ? "ภาพเส้นขอบฟ้ากรุงเทพมหานคร" : "Bangkok skyline"}
+            alt={locale === "th" ? "ภาพเมืองกรุงเทพยามค่ำคืน" : "Bangkok skyline at night"}
             className="section-photo"
             fill
             priority
             sizes="(max-width: 960px) 100vw, 48vw"
-            src="/thailand-scenes/bangkok-skyline.jpg"
+            src="/scene-crops/hero-bangkok-night-4x5.jpg"
           />
           <div className="photo-overlay" />
           <div className="floating-card floating-card-main">

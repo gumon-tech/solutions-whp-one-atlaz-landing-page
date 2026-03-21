@@ -30,18 +30,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const dictionary = siteCopy[locale];
 
   return {
-    title: dictionary.meta.title,
+    title: {
+      absolute: dictionary.meta.title
+    },
     description: dictionary.meta.description,
     openGraph: {
       title: dictionary.meta.title,
       description: dictionary.meta.description,
-      images: ["/og-image.svg"]
+      images: [locale === "th" ? "/og-image-th.svg" : "/og-image-en.svg"]
     },
     twitter: {
       card: "summary_large_image",
       title: dictionary.meta.title,
       description: dictionary.meta.description,
-      images: ["/og-image.svg"]
+      images: [locale === "th" ? "/og-image-th.svg" : "/og-image-en.svg"]
     }
   };
 }
@@ -64,7 +66,7 @@ export default async function LocalePage({ params }: PageProps) {
       <WorkflowSection dictionary={dictionary} locale={locale as Locale} />
       <AudienceSection dictionary={dictionary} />
       <CtaSection dictionary={dictionary} />
-      <SiteFooter dictionary={dictionary} />
+      <SiteFooter dictionary={dictionary} locale={locale as Locale} />
     </main>
   );
 }

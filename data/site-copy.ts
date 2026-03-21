@@ -49,8 +49,10 @@ export type SiteDictionary = {
     eyebrow: string;
     title: string;
     copy: string;
+    prompt: string;
+    email: string;
     primaryCta: string;
-    secondaryCta: string;
+    copied: string;
   };
   footer: {
     summary: string;
@@ -65,7 +67,7 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
     meta: {
       title: "One Atlaz | แพลตฟอร์มข้อมูลเชิงพื้นที่สำหรับที่ดิน ตลาด และดีล",
       description:
-        "One Atlaz ช่วยให้ทีมค้นหา ประเมิน และขยับโอกาสจากทำเลได้ในระบบเดียว ด้วยข้อมูลที่ดิน สัญญาณตลาด บริบทพื้นที่ และการประสานงานของดีล"
+        "One Atlaz ช่วยให้ทีมค้นหา ประเมิน และขยับโอกาสจากทำเลได้ในระบบเดียว ด้วยข้อมูลที่ดิน สัญญาณตลาด บริบทพื้นที่ และการทำงานของดีลที่เชื่อมถึงกัน"
     },
     nav: {
       tagline: "แพลตฟอร์มสำหรับที่ดิน ตลาด และดีลโฟลว์",
@@ -87,8 +89,8 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
       highlights: ["ข้อมูลที่ดิน", "สัญญาณตลาด", "บริบทพื้นที่", "ดีลโฟลว์"],
       stats: [
         { value: "Map-First", label: "เริ่มวิเคราะห์จากทำเลและแปลงที่ดิน" },
-        { value: "Connected", label: "เชื่อมข้อมูลตลาด คอนเทนต์ และงานดีลเข้าด้วยกัน" },
-        { value: "Traceable", label: "ติดตามเอกสาร การตัดสินใจ และ next step ได้ชัดเจน" }
+        { value: "Connected", label: "เชื่อมข้อมูลตลาด คอนเทนต์ และการทำงานของดีลเข้าด้วยกัน" },
+        { value: "Traceable", label: "ติดตามเอกสาร การตัดสินใจ และขั้นตอนถัดไปได้ชัดเจน" }
       ],
       visualTitle: "One map for land, market, and deal flow",
       visualCopy: "เห็นภาพรวมพื้นที่ สัญญาณสำคัญ และสถานะการทำงานในมุมมองเดียว"
@@ -97,7 +99,7 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
       eyebrow: "ทำไมทีมจึงเลือก One Atlaz",
       title: "แพลตฟอร์มเดียวที่ช่วยให้ข้อมูล ทำเล และการตัดสินใจ เชื่อมถึงกัน",
       copy:
-        "สารจากเว็บไซต์หลักของ One Atlaz ชี้ชัดว่าแพลตฟอร์มนี้ถูกออกแบบมาเพื่อให้ทีม locate opportunity, evaluate context และ keep momentum from insight to action ได้ต่อเนื่องยิ่งขึ้น เราจึงปรับหน้านี้ให้เล่าเรื่องในมุมลูกค้าอย่างตรงไปตรงมา",
+        "One Atlaz ช่วยให้ทีมมองเห็นโอกาสจากทำเลได้เร็วขึ้น อ่านบริบทของพื้นที่ได้ครบขึ้น และเดินหน้าการตัดสินใจได้อย่างต่อเนื่องในระบบเดียว",
       points: [
         "เริ่มจากแผนที่เพื่อคัดกรองทำเลและพื้นที่ที่ควรดูต่อ",
         "อ่านข้อมูลที่ดิน ผังเมือง โครงสร้างพื้นฐาน และสัญญาณตลาดในภาพเดียว",
@@ -108,11 +110,11 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
       eyebrow: "ความสามารถหลักของแพลตฟอร์ม",
       title: "สิ่งที่ลูกค้าจะเห็นชัดเมื่อใช้งาน One Atlaz",
       intro:
-        "เนื้อหาส่วนนี้อิงจากข้อความบนเว็บไซต์หลัก แล้วเรียบเรียงใหม่ให้เหมาะกับการนำเสนอขายงานและสาธิตกับลูกค้า",
+        "One Atlaz ถูกออกแบบมาเพื่อช่วยให้การค้นหา ประเมิน และขยับโอกาสจากทำเลเกิดขึ้นได้อย่างเป็นระบบและชัดเจนยิ่งขึ้น",
       items: [
         {
           title: "Map Intelligence",
-          copy: "ตรวจดูแปลงที่ดิน โครงสร้างพื้นฐาน แนวการพัฒนา และบริบทเมืองผ่าน workspace ที่เริ่มจากแผนที่"
+          copy: "ตรวจดูแปลงที่ดิน โครงสร้างพื้นฐาน แนวการพัฒนา และบริบทเมืองผ่านพื้นที่ทำงานที่เริ่มจากแผนที่"
         },
         {
           title: "Market Discovery",
@@ -124,15 +126,15 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
         },
         {
           title: "Deal Coordination",
-          copy: "เก็บเอกสาร บันทึกการตัดสินใจ และ next action ของดีลไว้ใน flow เดียวกัน"
+          copy: "เก็บเอกสาร บันทึกการตัดสินใจ และขั้นตอนถัดไปของดีลไว้ในกระบวนการเดียวกัน"
         }
       ]
     },
     workflow: {
       eyebrow: "จากการค้นหาไปสู่การลงมือ",
-      title: "Workflow ที่ช่วยให้ทีมไม่เสียจังหวะระหว่างการดูทำเลกับการขยับดีล",
+      title: "กระบวนการทำงานที่ช่วยให้ทีมไม่เสียจังหวะระหว่างการดูทำเลกับการขยับดีล",
       intro:
-        "เราใช้แกนความคิดเดียวกับบนเว็บไซต์เดิมคือ Search with precision, Evaluate with clarity, Move with speed แล้วปรับให้เหมาะกับการอธิบายฟังก์ชันต่อผู้มีอำนาจตัดสินใจ",
+        "ตั้งแต่การคัดกรองพื้นที่ที่น่าสนใจ ไปจนถึงการแชร์ข้อมูลและกำหนดขั้นตอนถัดไป ทุกอย่างถูกจัดให้อยู่ในลำดับการทำงานที่ต่อเนื่องและเข้าใจง่าย",
       steps: [
         {
           title: "ค้นหาอย่างแม่นยำ",
@@ -152,7 +154,7 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
       eyebrow: "เหมาะกับใครบ้าง",
       title: "ออกแบบมาสำหรับทีมที่ทำงานอยู่ตรงจุดตัดของทำเล เงินทุน และจังหวะเวลา",
       intro:
-        "เว็บไซต์หลักระบุชัดว่า One Atlaz เหมาะกับ land owners, investors, developers, brokers และ enterprise teams หน้านี้จึงสรุปให้ลูกค้าเข้าใจทันทีว่าแพลตฟอร์มตอบโจทย์ใครบ้าง",
+        "เหมาะสำหรับทีมที่ต้องมองทำเล ประเมินบริบท และเดินหน้าการตัดสินใจร่วมกันด้วยข้อมูลที่ชัดและเชื่อมถึงกัน",
       items: [
         {
           title: "เจ้าของที่ดินและเจ้าของทรัพย์",
@@ -174,25 +176,27 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
     },
     closing: {
       eyebrow: "ขอชมการใช้งาน",
-      title: "เหมาะสำหรับการนำเสนอแพลตฟอร์มให้ลูกค้า พาร์ตเนอร์ และทีมภายใน",
+      title: "ขอสิทธิ์เข้าถึงแบบส่วนตัว",
       copy:
-        "หากต้องการนำ One Atlaz ไปใช้เพื่อดูทำเล ประเมินโอกาส หรือจัดการ workflow ของดีล เราสามารถต่อยอดจากหน้าเวอร์ชันนี้ไปสู่ deck, microsite หรือ demo flow เฉพาะกลุ่มลูกค้าได้ทันที",
-      primaryCta: "นัดพรีเซนต์",
-      secondaryCta: "อีเมลหาเรา"
+        "สำหรับนักลงทุน เจ้าของที่ดิน นักพัฒนา โบรกเกอร์ และพาร์ตเนอร์เชิงกลยุทธ์ที่ต้องการมองโอกาสจากทำเลได้ชัดเจนยิ่งขึ้น",
+      prompt: "สำหรับการขอใช้งานล่วงหน้า ขอเดโม หรือพูดคุยความร่วมมือเชิงกลยุทธ์ ติดต่อได้ที่",
+      email: "hello@oneatlaz.com",
+      primaryCta: "คัดลอกอีเมล",
+      copied: "คัดลอกอีเมลแล้ว"
     },
     footer: {
       summary:
-        "หน้าเวอร์ชันนี้เรียบเรียงใหม่จากสารบนเว็บไซต์ oneatlaz.com เพื่อใช้เป็น customer-facing presentation site ที่เน้นความเข้าใจง่ายและการเล่า value proposition ให้ชัดขึ้น",
+        "One Atlaz คือแพลตฟอร์มที่ช่วยให้ทีมค้นหา ประเมิน และขยับโอกาสจากทำเลได้อย่างมั่นใจยิ่งขึ้น ผ่านข้อมูลที่ดิน สัญญาณตลาด บริบทพื้นที่ และการทำงานของดีลที่เชื่อมถึงกัน",
       contactLabel: "ติดต่อ",
       contactValue: "hello@oneatlaz.com",
-      sourceLabel: "อ้างอิงสารจากเว็บไซต์หลัก One Atlaz"
+      sourceLabel: "One Atlaz"
     }
   },
   en: {
     meta: {
       title: "One Atlaz | A Platform for Land Intelligence, Market Context, and Deal Flow",
       description:
-        "One Atlaz helps teams discover, evaluate, and advance location-based opportunities through one map-first system for land data, market movement, place context, and deal coordination."
+        "One Atlaz helps teams discover, evaluate, and advance location-based opportunities through one map-first system for land data, market context, place insight, and connected deal workflow."
     },
     nav: {
       tagline: "A platform for land, market, and deal flow",
@@ -224,7 +228,7 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
       eyebrow: "Why Teams Choose One Atlaz",
       title: "A platform where data, geography, and decision-making stay connected",
       copy:
-        "The messaging on oneatlaz.com is centered on helping teams locate opportunity, evaluate context, and keep momentum from insight to action. This version reframes that same product story into a more direct customer-facing presentation.",
+        "One Atlaz gives teams a clearer way to identify location-based opportunity, understand place context, and move from insight to action without losing momentum.",
       points: [
         "Start with the map to narrow down the places worth deeper review",
         "Read land data, planning context, infrastructure, and market movement together",
@@ -235,7 +239,7 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
       eyebrow: "Platform Capabilities",
       title: "What customers can understand quickly from a One Atlaz presentation",
       intro:
-        "This section keeps the core capability structure from the main website, but presents it in a cleaner sales and walkthrough format.",
+        "One Atlaz is built to make location discovery, evaluation, and deal progression feel more structured, more visible, and easier to act on.",
       items: [
         {
           title: "Map Intelligence",
@@ -259,7 +263,7 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
       eyebrow: "From Search to Next Move",
       title: "A workflow that reduces friction between evaluating place and progressing the deal",
       intro:
-        "We keep the logic of Search with precision, Evaluate with clarity, Move with speed from the main site, then rewrite it for a customer-facing walkthrough.",
+        "From narrowing the right geography to sharing documents and defining next actions, the workflow is designed to keep teams aligned and moving.",
       steps: [
         {
           title: "Search with precision",
@@ -279,7 +283,7 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
       eyebrow: "Who It Is For",
       title: "Built for teams working where place, capital, and timing meet",
       intro:
-        "The main website explicitly calls out land owners, investors, developers, brokers, and enterprise teams. This section turns that into a fast customer-read summary.",
+        "Designed for teams that need to assess location, read context, and move decisions forward with a shared view of the opportunity.",
       items: [
         {
           title: "Land owners and property holders",
@@ -301,18 +305,20 @@ export const siteCopy: Record<Locale, SiteDictionary> = {
     },
     closing: {
       eyebrow: "Request a Walkthrough",
-      title: "Made for customer presentations, partner conversations, and internal alignment",
+      title: "Request private access",
       copy:
-        "If you want to use One Atlaz to present location opportunity, evaluate land, or organize deal workflow, this version can be extended into a focused deck, microsite, or demo flow for a specific audience.",
-      primaryCta: "Book a Presentation",
-      secondaryCta: "Email Us"
+        "For investors, land owners, developers, brokers, and strategic partners exploring location-based opportunity.",
+      prompt: "For early access, demo inquiries, or strategic partnership conversations, email",
+      email: "hello@oneatlaz.com",
+      primaryCta: "Copy Address",
+      copied: "Address copied"
     },
     footer: {
       summary:
-        "This version rewrites the core messaging from oneatlaz.com into a customer-facing presentation site with clearer value communication and easier section management.",
+        "One Atlaz helps teams discover, evaluate, and advance location-based opportunity through connected land data, market context, place insight, and deal workflow.",
       contactLabel: "Contact",
       contactValue: "hello@oneatlaz.com",
-      sourceLabel: "Based on messaging from the main One Atlaz website"
+      sourceLabel: "One Atlaz"
     }
   }
 };

@@ -32,21 +32,26 @@ const thaiDisplayFont = Noto_Sans_Thai_Looped({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://oneatlaz.com"),
-  title: "One Atlaz | Land, Market, and Deal Intelligence",
+  title: {
+    default: "One Atlaz",
+    template: "%s | One Atlaz"
+  },
+  applicationName: "One Atlaz",
   description:
-    "A customer-facing presentation site for One Atlaz, built around land intelligence, market context, place-based insight, and deal workflow.",
+    "One Atlaz brings land intelligence, market context, place-based insight, and deal workflow into one map-first platform.",
   openGraph: {
-    title: "One Atlaz | Land, Market, and Deal Intelligence",
+    title: "One Atlaz",
     description:
-      "A customer-facing presentation site for One Atlaz, built around land intelligence, market context, place-based insight, and deal workflow.",
-    images: ["/og-image.svg"]
+      "One Atlaz brings land intelligence, market context, place-based insight, and deal workflow into one map-first platform.",
+    siteName: "One Atlaz",
+    images: ["/og-image-th.svg"]
   },
   twitter: {
     card: "summary_large_image",
-    title: "One Atlaz | Land, Market, and Deal Intelligence",
+    title: "One Atlaz",
     description:
-      "A customer-facing presentation site for One Atlaz, built around land intelligence, market context, place-based insight, and deal workflow.",
-    images: ["/og-image.svg"]
+      "One Atlaz brings land intelligence, market context, place-based insight, and deal workflow into one map-first platform.",
+    images: ["/og-image-th.svg"]
   },
   icons: {
     icon: "/icon.svg",
